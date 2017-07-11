@@ -11,5 +11,11 @@ docker build -t kid1412z/centos7-python36
 ## Run container
 
 ```
-docker run -it kid1412z/centos7 /bin/bash
+docker run -it kid1412z/centos7-python36 /bin/bash
+```
+
+## Pulling prebuild image
+
+```
+docker pull kid1412z/docker-centos7-python36
 ```
