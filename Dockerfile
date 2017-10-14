@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:7.2.1511
 MAINTAINER kid1412z <zuoqy.gk@gmail.com>
 
 ENV PYTHON_VERSION "3.6.0" 
