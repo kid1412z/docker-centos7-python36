@@ -10,13 +10,16 @@ ADD pip.conf /root/.pip
 
 RUN yum clean all && \
     yum -y update && \
-    yum -y install zlib-dev openssl-devel sqlite-devel bzip2-devel
-
-RUN yum -y install curl wget tar bzip2 unzip yum-utils hostname net-tools && \
+    yum install -y sudo deltarpm && \ 
+    yum install -y yum-utils hostname net-tools && \
     yum -y install gcc gcc-c++ git make automake cmake patch logrotate  && \
     yum -y install libpng-devel libjpeg-devel && \
-    yum clean all
+    yum clean all 
 
+RUN yum -y install curl && \ 
+    yum clean all && \
+    yum install -y wget tar bzip2 unzip && \
+    yum clean all
 
 RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz && \
     tar xvf Python-${PYTHON_VERSION}.tgz && \
