@@ -19,6 +19,7 @@ RUN yum clean all && \
 RUN yum -y install curl && \ 
     yum clean all && \
     yum install -y wget tar bzip2 unzip && \
+    yum -y install zlib-dev openssl-devel sqlite-devel bzip2-devel && \
     yum clean all
 
 RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz && \
